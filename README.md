@@ -1,2 +1,2 @@
 # thomasmpflanz.github.io
-Thomas's Resume
+Thomas's Homepage
