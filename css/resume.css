@@ -54,6 +54,22 @@ table {
 /* End of CSS Reset                                                           */
 /******************************************************************************/
 
+/* Some of the following CSS from http://duhoang.com/ , designed by Du Hoang. */
+
+html {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+body {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}    
+
 .icon {
     display: inline-block;
 }
@@ -62,13 +78,7 @@ table {
     position: relative;
     z-index: 100;
 }
-/*
-body {
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 8px 0 0 0;
-}    
-*/
+
 .header-content {
     max-width: 768px;
     margin: 0 auto;
@@ -216,10 +226,19 @@ main, section {
     padding-top: 1em;
     clear: both;
 }
-.entry {
-    display:flex;
+
+section {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+.entry {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
 
 .entry-role, .entry-show, .entry-dir, .entry-company {
     float: left;
@@ -229,6 +248,39 @@ main, section {
 /*    padding-right: 5px;*/
     display: inline-block;
 }
+
+.entry-role {
+  -webkit-box-ordinal-group: 1;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 1;      /* OLD - Firefox 19- */
+  -ms-flex-order: 1;              /* TWEENER - IE 10 */
+  -webkit-order: 1;               /* NEW - Chrome */
+  order: 1;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.entry-show {
+  -webkit-box-ordinal-group: 2;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 2;      /* OLD - Firefox 19- */
+  -ms-flex-order: 2;              /* TWEENER - IE 10 */
+  -webkit-order: 2;               /* NEW - Chrome */
+  order: 2;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.entry-dir {
+  -webkit-box-ordinal-group: 3;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 3;      /* OLD - Firefox 19- */
+  -ms-flex-order: 3;              /* TWEENER - IE 10 */
+  -webkit-order: 3;               /* NEW - Chrome */
+  order: 3;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.entry-company {
+  -webkit-box-ordinal-group: 4;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-ordinal-group: 4;      /* OLD - Firefox 19- */
+  -ms-flex-order: 4;              /* TWEENER - IE 10 */
+  -webkit-order: 4;               /* NEW - Chrome */
+  order: 4;                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
 
 .section-header {
     font-weight: bold;
